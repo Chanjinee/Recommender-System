@@ -6,4 +6,4 @@
 ![image](https://user-images.githubusercontent.com/78646691/160594893-0730dd36-4a52-4fde-8629-f405f2fc1ea4.png) 
 
 
-	- a) <span style='background-color: #fff5b1'> 기존 추천모델의 방식을 그대로</span> 사용, b) 단일화된 점수 또는 순위를 생성
+<span style='background-color: #fff5b1'> 기존 추천모델의 방식을 그대로</span> 사용, b) 단일화된 점수 또는 순위를 생성
