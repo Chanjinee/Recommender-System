@@ -1,4 +1,4 @@
-## 개요
+## Abstract
 - Memorization에 특화된 Wide모델과, Generalization에 특화된 Deep 모델을 결합한 Wide and deep모델을 제안
 - 각 모델의 장점을 통하여 더 좋은 모델을 만들어 냄
 
