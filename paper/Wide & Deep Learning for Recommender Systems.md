@@ -51,3 +51,48 @@
 - 단점 
 	- pair가 없었던, 이런 앱들은 다른 앱과의 관계를 제대로 표현하지 못한 임베딩 벡터를 가질 가능성이 큼
 	- 희소한 앱들은 학습이 잘 안되기 때문에 전혀 관계없는 아이템들이 추천될 수도 있음
+
+
+## Wide & Deep learning
+### The wide component
+
+![image](https://user-images.githubusercontent.com/78646691/163555206-51302c42-478e-4f32-8caa-44101ecf4947.png)
+
+- input data 
+	- install_app , impression_app 두 feature를 cross-product한 결과
+	- 위의 Introduction에서 설명한 그림에서 제일 오른쪽 열
+	- 여기서 데이터는 위에서 설명한 것과 같이 봤으면 1, 보지 못했으면 0 등의 기준으로 임베딩 될 수 있음
+
+![image](https://user-images.githubusercontent.com/78646691/163555277-dd89a791-0230-4340-ba74-8d7e1a1270c5.png)
+
+- 학습 과정
+	- input X에 가중치 W를 곱하여 bias를 더한 형태
+	- W와 b를 Backpropagation을 통하여 학습, 갱신
+
+### The deep component
+
+![image](https://user-images.githubusercontent.com/78646691/163555376-5f8f5e45-32c8-47ec-ac0e-766ff963f4d9.png)
+
+- input data
+	- continuous feature와, 임베딩 된 categorical feature를 concat한 결과
+
+![image](https://user-images.githubusercontent.com/78646691/163555756-3a6b1c5a-b865-4767-b3a7-1207b6ee49ae.png)
+
+- 학습 과정
+	- input에 가중치 W곱하고 bias더한 것을 활성화 함수에 넣은 전형적인 mlp구조
+	- 위 전체 도식화 그림에 따르면 총 3개의 layer를 쌓았으며, 활성화 함수로 ReLU를 사용
+
+### Joint training of wide & deep model
+
+![image](https://user-images.githubusercontent.com/78646691/163555860-2d59b232-3145-482e-bf22-c8c790d94175.png)
+
+	- joint training은 여러 개여 모델을 결합하는 앙상블과 달리. Output의 gradient를 wide와 deep모델에 동시에 backpropagation하여 학습
+
+- 논문에 따르면, wide 모델에서는, optimizer로 online learing 방식인 Follow-the-regularized-leader(FTRL) 알고리즘을, deep 모델에서는 Adagrad를 사용 
+
+- 결과값 도출 (prediction)
+
+![image](https://user-images.githubusercontent.com/78646691/163556084-a5dd833e-abd1-4522-9a5a-6c9040c15aab.png)
+
+	- W는 wide와 deep동시에 역전파로 학습, 각각을 각자의 output과 곱한 후 더하여 sigmoid에 넣은 것이 최종 결과값
+	-  결과값은 해당 앱을 추천에 포함할 확률
