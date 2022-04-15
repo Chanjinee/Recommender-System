@@ -19,4 +19,4 @@
 구글 플레이의 예를 통해 모델을 이해
 - Wide에서 사용되는 input은  User가 설치한 앱 Feature와, 열람한 Feature간의 interaction
 
-![image](https://user-images.githubusercontent.com/78646691/163550833-086a884d-4a4e-4fc0-a499-e67a88126962.png)
+<img src="./img/image.jpg" width="200" height="150"/>
