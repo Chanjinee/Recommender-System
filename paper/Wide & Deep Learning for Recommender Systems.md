@@ -96,3 +96,7 @@
 
 	- W는 wide와 deep동시에 역전파로 학습, 각각을 각자의 output과 곱한 후 더하여 sigmoid에 넣은 것이 최종 결과값
 	- 결과값은 해당 앱을 추천에 포함할 확률
+
+
+### 참고
+https://leehyejin91.github.io/post-wide_n_deep/ 
