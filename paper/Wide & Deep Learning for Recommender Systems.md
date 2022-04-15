@@ -12,7 +12,7 @@
 	- 날개를 가진 모든 새들은 날 수 있다. -> Deep / Generalization
 	- 모든 날개를 가진 새들은 날 수 있지만 펭귄, 등 예외인 동물이 있다. -> Wide & Deep
 
-## Wide & Deep
+## Introduction
 ### Wide
 	- Wide Model은 Feature들 간의 모든 경우의 수를 고려하기 때문에 좌우로 Wide한 형태를 띔
 
