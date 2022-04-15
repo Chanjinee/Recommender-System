@@ -95,4 +95,4 @@
 ![image](https://user-images.githubusercontent.com/78646691/163556084-a5dd833e-abd1-4522-9a5a-6c9040c15aab.png)
 
 	- W는 wide와 deep동시에 역전파로 학습, 각각을 각자의 output과 곱한 후 더하여 sigmoid에 넣은 것이 최종 결과값
-	-  결과값은 해당 앱을 추천에 포함할 확률
+	- 결과값은 해당 앱을 추천에 포함할 확률
