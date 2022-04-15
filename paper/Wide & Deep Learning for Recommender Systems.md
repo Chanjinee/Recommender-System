@@ -21,3 +21,9 @@
 
 ![image](https://user-images.githubusercontent.com/78646691/163551466-95e0518c-3d9b-4e0f-9eae-e0e42f75150f.png)
 
+
+
+	- User가 해당 앱을 설치했으면 1, 아니면 0  
+	- User가 해당 앱을 봤으면 1, 아니면 0 
+	- 위의 결과를 바탕으로 결과를 단순히 곱하여 input으로 사용
+![image](https://user-images.githubusercontent.com/78646691/163551797-230283f3-3190-4177-8e51-25f24b14d914.png)
