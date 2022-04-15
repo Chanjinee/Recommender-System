@@ -19,4 +19,4 @@
 구글 플레이의 예를 통해 모델을 이해
 - Wide에서 사용되는 input은  User가 설치한 앱 Feature와, 열람한 Feature간의 interaction
 
-<img src="./img/image.png" width="400" height="150"/>
+<img src="./img/image.png" width="800" height="100"/>
