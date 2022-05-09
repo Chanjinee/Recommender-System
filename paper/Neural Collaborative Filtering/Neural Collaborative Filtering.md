@@ -67,5 +67,3 @@ linear한 기존의 CF방식은 이와 같은 문제점을 가짐
 
 **4)Output Layer**
 - Output layer에서는 NCF layer의 hidden vector를 input으로 받아 predictive score y_hat_ui를 예측하며, Target인 y_ui와의 비교를 통해 학습이 진행됨.
-
-
