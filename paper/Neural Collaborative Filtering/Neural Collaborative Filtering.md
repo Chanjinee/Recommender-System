@@ -25,5 +25,21 @@
 - 결국 user가 모르는 item중에서 user가 좋아할 것이라고 생각되는 item을 예측하는 문제가 됨
 
 ## Matrix Factorization
-행렬 Y의 y_ui를 예측하기 위한 방법 중 하나는 MF를 이용하는 것.
 ![image](https://user-images.githubusercontent.com/78646691/167338865-9b473dbb-7b48-44f0-ae22-f2a721d4ed1a.png)
+
+- 행렬 Y의 y_ui를 예측하기 위한 방법 중 하나는 MF를 이용하는 것.
+- Y를 인수 분해하여 P와 Q의 latent factor를 구함.
+- y_ui의 경우 P와 Q의 내적을 통해 추정하게 됨.
+
+### The limitation of Matrix Factorization
+![image](https://user-images.githubusercontent.com/78646691/167339155-4701e672-44c5-4dbd-8220-c2355e34c95b.png)
+
+- 이 논문에서는 linear한 방법인 내적을 통해서는 user와 item간의 복잡한 관계를 표현하기가 어렵다고 설명함. 
+- 왼쪽의 그림과 같은 행렬이 있고, s_ji는 user j와 i 의 유사도를 나타낸다.
+- s_23(0.66)>s_12(0.50)>s_13(0.40) 인 관계가 성립하고 이를 기하학적인 그림으로 표현할 때, 오른쪽의 그림과 같이 표현됨.
+- 이때, linear space의 한계는 user4에서 발생. 
+- s_41(0.60)>s_43(0.40)>s_42(0.20)의 관계일 때, 4와 1을 가장 가깝게 하는 동시에 4와 2를 가장 멀게하는 p4벡터를 찾을 수 없는 문제가 발생. 
+
+linear한 기존의 CF방식은 이와 같은 문제점을 가짐  
+따라서 저자는 조금 더 유연한( linear의 문제점을 해결 ) DNN모델을 사용하여 해결하고자함
+
