@@ -10,3 +10,4 @@
 
 ## Paper
 - Wide & Deep Learning for Recommender Systems
+- Neural Collaborative Filtering
