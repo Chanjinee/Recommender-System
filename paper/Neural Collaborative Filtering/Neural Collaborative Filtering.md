@@ -46,7 +46,26 @@ linear한 기존의 CF방식은 이와 같은 문제점을 가짐
 ## Neural Collaborative Filtering
 ![image](https://user-images.githubusercontent.com/78646691/167341613-8d86981b-f5f8-4c1d-9fd5-ea3db873323d.png)
 
-**Input Layer(sparse)**
+**1)Input Layer(sparse)**
+- input layer에는 user와 item이 각각 따로 들어가게 됨.
+- 각각의 벡터는 user한명, item한개를 one-hot encoding한 형태로 들어가게 됨.
+- 즉, 0이 매우 많은 sparse한 형태를 갖게됨.
 
+**2)Embedding Layer** 
+- Embedding layer는  sparse한  input vector를  Dense하게 바꿔주는 역할을 함.
+- 일반적인 임베딩 방법과 동일하게 fully-connected layer가 사용됩니다.
+- Embedding Matrix를 통하여 M,N 차원의 user,item vector를 K차원의 latent space에 표현한 것으로도 생각해 볼 수 있음.
+
+![image](https://user-images.githubusercontent.com/78646691/167342006-a0e09e2a-91c3-433b-8cfc-89cad7320adf.png)
+
+- 이 P 행렬의 각 행은 각 user를 표현하는 저차원의 dense 벡터가 되고 이를 user latent vector로 사용하게 된다.
+- 즉, one-hot encoding된 각각의 user는 embedding layer를 거쳐 P로 임베딩 된다.
+
+**3)Neural CF Layers**
+- 층에 들어갈 때, User latent vector와 Item latent vector를  concat한 벡터가 들어감
+- 이후 각각의 층을 거치며 인공신경망을 통해 non-linear 관계를 학습할 수 있음.
+
+**4)Output Layer**
+- Output layer에서는 NCF layer의 hidden vector를 input으로 받아 predictive score y_hat_ui를 예측하며, Target인 y_ui와의 비교를 통해 학습이 진행됨.
 
 
