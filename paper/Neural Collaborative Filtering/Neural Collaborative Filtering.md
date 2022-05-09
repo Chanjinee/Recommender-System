@@ -70,9 +70,11 @@ linear한 기존의 CF방식은 이와 같은 문제점을 가짐
 
 
 ## 참고
-- 참고글: https://leehyejin91.github.io/post-ncf/ 
+- 참고글: 
+- 	  https://leehyejin91.github.io/post-ncf/ 
 -         https://lsjsj92.tistory.com/613
 -         https://supkoon.tistory.com/28 
 
-- code: https://paperswithcode.com/paper/neural-collaborative-filtering   
-        https://github.com/LeeHyeJin91/Neural_CF
+- code: 
+- 	  https://paperswithcode.com/paper/neural-collaborative-filtering   
+- 	  https://github.com/LeeHyeJin91/Neural_CF
