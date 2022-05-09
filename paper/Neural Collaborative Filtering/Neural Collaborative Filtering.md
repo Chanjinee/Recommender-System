@@ -43,3 +43,10 @@
 linear한 기존의 CF방식은 이와 같은 문제점을 가짐  
 따라서 저자는 조금 더 유연한( linear의 문제점을 해결 ) DNN모델을 사용하여 해결하고자함
 
+## Neural Collaborative Filtering
+![image](https://user-images.githubusercontent.com/78646691/167341613-8d86981b-f5f8-4c1d-9fd5-ea3db873323d.png)
+
+**Input Layer(sparse)**
+
+
+
