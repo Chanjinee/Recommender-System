@@ -11,3 +11,6 @@
 ## Paper
 - Wide & Deep Learning for Recommender Systems
 - Neural Collaborative Filtering
+
+## 캡스톤디자인I
+- Recommender System Using Wide & Deep Technique and Side Information
